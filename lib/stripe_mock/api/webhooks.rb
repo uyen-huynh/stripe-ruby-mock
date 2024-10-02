@@ -55,6 +55,7 @@ module StripeMock
         'customer.source.created',
         'customer.source.deleted',
         'customer.source.updated',
+        'customer.source.expiring',
         'customer.created',
         'customer.updated',
         'customer.deleted',
