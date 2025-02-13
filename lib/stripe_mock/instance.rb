@@ -61,7 +61,7 @@ module StripeMock
                 :disputes, :events, :invoices, :invoice_items, :orders, :payment_intents, :payment_methods,
                 :setup_intents, :plans, :prices, :promotion_codes, :recipients, :refunds, :transfers, :payouts,
                 :subscriptions, :country_spec, :subscriptions_items, :products, :tax_ids, :tax_rates, :checkout_sessions,
-                :checkout_session_line_items
+                :checkout_session_line_items, :reversals
 
     attr_accessor :error_queue, :debug, :conversion_rate, :account_balance
 
@@ -90,6 +90,7 @@ module StripeMock
       @recipients = {}
       @refunds = {}
       @transfers = {}
+      @reversals = {}
       @payouts = {}
       @subscriptions = {}
       @subscriptions_items = {}
