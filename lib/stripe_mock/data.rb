@@ -1357,5 +1357,20 @@ module StripeMock
         success_url: 'https://example.com/success'
       }.merge(params)
     end
+
+    def self.mock_transfer_reversal(params = {})
+      transfer_reversal_id = params[:id] || "trr_#{rand(1000_000_000)}"
+
+      {
+        id: transfer_reversal_id,
+        object: "transfer_reversal",
+        amount: params[:amount],
+        balance_transaction: "txn_#{rand(1000_000_000)}",
+        created: Time.now.to_i,
+        currency: params[:currency] || "usd",
+        metadata: params[:metadata] || {},
+        transfer: params[:transfer]
+      }.merge(params)
+    end
   end
 end
