@@ -88,7 +88,7 @@ module StripeMock
 
         raise Stripe::InvalidRequestError.new(
           "ToS acceptance date is not valid. Dates are expected to be integers, measured in seconds, not in the future, and after 2009",
-          "tos_acceptance[date]", 
+          "tos_acceptance[date]",
           http_status: 400
         )
       end

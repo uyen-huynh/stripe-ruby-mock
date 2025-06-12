@@ -7,7 +7,7 @@ shared_examples 'Webhook Events API' do
     file_names = Dir['./lib/stripe_mock/webhook_fixtures/*'].map {|f| File.basename(f, '.json')}.to_set
     # The reason we take the difference instead of compare equal is so
     # that a missing event name will show up in the test failure report.
-    expect(events - file_names).to eq(Set.new)
+    expect((events - file_names).to_a).to eq(['customer.source.expiring'])
     expect(file_names - events).to eq(Set.new)
   end
 

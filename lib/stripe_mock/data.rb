@@ -10,7 +10,7 @@ module StripeMock
         statement_descriptor: nil,
         display_name: "Stripe.com",
         timezone: "US/Pacific",
-        details_submitted: false,
+        details_submitted: true,
         capabilities: {
           bank_transfer_payments: "active",
           card_payments: "active",
